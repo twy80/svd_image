@@ -6,7 +6,7 @@ Coding image compression via SVD is a good practice; one can learn SVD which is 
 
 # Program files
 
-There are only four program files: 1) one file containing the main SVD and plotting functions, and 2) three independent files doing basically the same thing except for the user interface.
+There are only four program files: 1) one file containing the main SVD and plotting functions, and 2) three independent files doing basically the same things except for the user interface.
 
 1. **svd_image_functions.py**
 
@@ -23,7 +23,7 @@ There are only four program files: 1) one file containing the main SVD and plott
 
    - [2.2] **svd_image_entry.py** performs image compression via SVD by using **svd_image** and plots the resulting images using **plot_images_tk** as in 2.1. GUI interface is employed here.
 
-   - [2.3] **svd_image_scale.py** is almost identical to **svd_image_entry.py** except for a slight different way of selecting the output rank. Instead of an Entry widget as in 2.2, a Scale widget is employed here.
+   - [2.3] **svd_image_scale.py** is almost identical to **svd_image_entry.py** except for a slightly different way of selecting the output rank. Instead of an Entry widget as in 2.2, a Scale widget is employed here.
 
 # Environment
 
