@@ -7,15 +7,7 @@ Coding image compression via SVD is a good practice; one can learn SVD which is 
 ---
 # SVD (Singular Value Decomposition)
 
-The SVD of a matrix $A$ is the factorization of $A$ into the product of three matrices $A = UDV^T$, where the columns of $U$ and $V$ are orthonormal and the matrix $D$ is diagonal with positive real entries. This decomposition can also be written as
-
-$$ A = \sum_{k=1}^{r} \sigma_k u_k v_k^T$$
-
-where the singular value $\sigma_k$ is the $k$-th element of $D$ arranged in decending order, and $u_k$ and $v_k$ are the $k$-th columns of $U$ and $V$. The approximation of $A$ can thus be obtained as follows:
-
-$$ \tilde{A} = \sum_{k=1}^{n} \sigma_k u_k v_k^T$$
-
-where $n (\le r)$ is the rank of the compressed matrix $\tilde{A}$. If $A$ contains pixels of an image, $\tilde{A}$ is a compressed image using a reduced amount of memory. This is what is meant by image compression via SVD.
+A very brief explanation of SVD is given in the file **SVD.ipynb**.
 
 ---
 
