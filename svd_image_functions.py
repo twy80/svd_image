@@ -58,33 +58,25 @@ def svd_image(input_image, output_rank, new_image=True):
     return img_as_ubyte(np.clip(output_image, 0, 1))
 
 
-def plot_images(images, descriptions=None, new_window=True):
+def plot_images(images, descriptions=None):
     """
     This function plots a list of images.
 
     :param images:          list of images to be plotted
     :param descriptions:    list of captions for the images
-    :param new_window:      True  => opening a new window for plotting images
-                            False => reusing the window previously prepared
     """
 
     plt.rcParams.update({'font.size': 5})
     num_of_images = len(images)
 
-    if new_window is True:
-        plot_images.fig, plot_images.axes = plt.subplots(
-            1, num_of_images, figsize=(2 * num_of_images, 2), dpi=200
-        )
-        plot_images.fig.tight_layout(rect=(0.04, 0.04, 0.96, 0.96))
+    plt.close('all')
+    fig, axes = plt.subplots(
+        1, num_of_images, figsize=(2 * num_of_images, 2), dpi=200
+    )
+    fig.tight_layout(rect=(0.04, 0.04, 0.96, 0.96))
 
     for n in range(num_of_images):
-        try:
-            ax = plot_images.axes[n] if num_of_images > 1 else plot_images.axes
-        except Exception:
-            raise Exception(
-                "\nProblems with the window previously obtained. Set new_window = True!\n"
-            )
-
+        ax = axes[n] if num_of_images > 1 else axes
         ax.imshow(images[n], cmap="gray")
         if descriptions:
             ax.set_title(descriptions[n])

@@ -74,11 +74,11 @@ def run_svd_image_scale():
         if input_image_int is None:
             messagebox.showinfo("Info", "Select your file!")
         else:
-            new_image = True
             results.append(input_image_int)
             captions.append(f"Rank-{rank} image")
             plot_images_tk(results, captions, root, new_image)
 
+            new_image = True
             results, captions = [], []  # initialize nonlocal variables
             input_image_int = None
             rank = 1

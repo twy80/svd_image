@@ -92,8 +92,7 @@ def run_svd_image_cmd():
 
         plot_images(
             [output_image_int, input_image_int],
-            [f"Rank-{output_rank} image", f"Original rank-{rank} image"],
-            new_image
+            [f"Rank-{output_rank} image", f"Original rank-{rank} image"]
         )
         # Plot the resulting images
 
