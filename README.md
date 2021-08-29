@@ -7,7 +7,7 @@ Coding image compression via SVD is a good practice; one can learn SVD which is 
 ---
 # SVD (Singular Value Decomposition)
 
-A very brief explanation of SVD is given in the file **SVD.ipynb**.
+A very brief explanation of SVD is given in the file in [SVD.ipynb](https://github.com/twy80/svd_image/blob/main/SVD.ipynb).
 
 ---
 
