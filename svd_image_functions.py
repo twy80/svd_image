@@ -1,6 +1,6 @@
 """
 Functions for Image Compression using SVD
-Coded by T.-W. Yoon (Aug. 2021)
+Coded by T.-W. Yoon, Aug. 2021
 """
 
 import numpy as np
