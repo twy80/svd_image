@@ -1,5 +1,5 @@
 """
-Image Compression using SVD. by T.-W. Yoon, Aug. 2021
+Image Compression using SVD by T.-W. Yoon, Aug. 2021
 """
 
 
