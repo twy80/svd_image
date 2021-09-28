@@ -53,7 +53,8 @@ def run_svd_image_cmd():
     """
 
     import numpy as np
-    from svd_image_functions import svd_image, plot_images
+
+    from svd_image_functions import plot_images, svd_image
 
     results, captions = [], []
     rank = 1
@@ -76,7 +77,7 @@ def run_svd_image_cmd():
             rank = max(rank, np.linalg.matrix_rank(input_image_int[:, :, i]))
 
     print(f"\nRank of the original picture is {rank}.")
-    
+
     new_image = True
 
     while True:  # Construct the images using SVD for various rank values

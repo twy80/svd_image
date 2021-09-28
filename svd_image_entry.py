@@ -19,7 +19,8 @@ def run_svd_image_entry():
 
     import tkinter as tk
     from tkinter import messagebox
-    from svd_image_functions import svd_image, plot_images_tk
+
+    from svd_image_functions import plot_images_tk, svd_image
 
     results, captions = [], []
     input_image_int = None
@@ -34,10 +35,11 @@ def run_svd_image_entry():
         as nonlocal variables 'input_image_int' and 'rank'.
         """
 
-        import numpy as np
-        import imageio
         import tkinter.filedialog as fd
-        # tk.Tk().withdraw()
+
+        import imageio
+        import numpy as np
+
         nonlocal input_image_int, rank
 
         image_file_name = fd.askopenfilename(
@@ -116,7 +118,7 @@ def run_svd_image_entry():
                     )
                     # Plot the resulting images
                     new_image = False
-                    
+
                     results.append(output_image_int)  # Stack the results for plot_all_reset
                     captions.append(f"Rank-{output_rank}")
                 else:

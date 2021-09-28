@@ -3,11 +3,12 @@ Functions for Image Compression using SVD
 Coded by T.-W. Yoon, Aug. 2021
 """
 
-import numpy as np
-from skimage.util import img_as_float, img_as_ubyte
-import matplotlib.pyplot as plt
 import tkinter as tk
+
+import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from skimage.util import img_as_float, img_as_ubyte
 
 
 def svd_image(input_image, output_rank, new_image=True):
