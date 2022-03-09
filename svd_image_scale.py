@@ -122,42 +122,39 @@ def run_svd_image_scale():
     # GUI for the main program #
     ############################
 
-    base_color = {"bg": "white", "fg": "black"}
     root = tk.Tk()
     root.title("Image compression by SVD")
-    root.config(bg="white")
     root.bind("<Return>", lambda event: check_call_svd())
 
     tk.Label(
         root, text="Select your image for compression",
-        **base_color, padx=15, pady=15
+        padx=15, pady=15
     ).pack(expand=tk.YES, fill=tk.BOTH)
 
     button_selection = tk.Button(
-        root, **base_color, text="Select File",
-        command=select_image
+        root, text="Select File", command=select_image
     )
     button_selection.pack()
 
     tk.Label(
         root, text="Rank of the compressed image",
-        **base_color, padx=15, pady=15
+        padx=15, pady=15
     ).pack(expand=tk.YES, fill=tk.BOTH)
 
     var = tk.IntVar()
     scale_rank = tk.Scale(
-        root, **base_color, variable=var, showvalue=True, from_=1, to=100,
+        root, variable=var, showvalue=True, from_=1, to=100,
         length=290, tickinterval=99, orient=tk.HORIZONTAL, sliderlength=15)
     scale_rank.pack(padx=15)
 
-    frame_buttons = tk.Frame(root, bg="white")
+    frame_buttons = tk.Frame(root)
     frame_buttons.pack(padx=15, pady=15)
     tk.Button(
-        frame_buttons, **base_color, text="Perform SVD",
+        frame_buttons, text="Perform SVD",
         command=check_call_svd
     ).pack(side=tk.LEFT)
     tk.Button(
-        frame_buttons, **base_color, text="Plot all and reset",
+        frame_buttons, text="Plot all and reset",
         command=plot_all_reset
     ).pack(side=tk.RIGHT)
 

@@ -128,42 +128,39 @@ def run_svd_image_entry():
     # GUI for the main program #
     ############################
 
-    base_color = {"bg": "white", "fg": "black"}
     root = tk.Tk()
     root.title("Image compression by SVD")
-    root.config(bg="white")
     root.bind("<Return>", lambda event: check_call_svd())
 
     tk.Label(
         root, text="Select your image for compression",
-        **base_color, padx=15, pady=15
+        padx=15, pady=15
     ).pack(expand=tk.YES, fill=tk.BOTH)
 
     button_selection = tk.Button(
-        root, **base_color, text="Select File",
-        command=select_image
+        root, text="Select File", command=select_image
     )
     button_selection.pack()
 
-    frame_number = tk.Frame(root, bg="white")
+    frame_number = tk.Frame(root)
     frame_number.pack(padx=15, pady=15)
     tk.Label(
-        frame_number, **base_color,
+        frame_number,
         text="Rank of the output image  \u21D2 "
     ).pack(side=tk.LEFT)
-    entry_value = tk.Entry(frame_number, **base_color, bd=4, width=4)
+    entry_value = tk.Entry(frame_number, bd=4, width=4)
     # entry_value.bind("<Return>", (lambda event: check_call_svd()))
     entry_value.pack(side=tk.RIGHT)
 
-    frame_buttons = tk.Frame(root, bg="white")
+    frame_buttons = tk.Frame(root)
     frame_buttons.pack(padx=15, pady=15)
     tk.Button(
-        frame_buttons, **base_color,
-        text="Perform SVD", command=check_call_svd
+        frame_buttons, text="Perform SVD",
+        command=check_call_svd
     ).pack(side=tk.LEFT)
     tk.Button(
-        frame_buttons, **base_color,
-        text="Plot all and reset", command=plot_all_reset
+        frame_buttons, text="Plot all and reset",
+        command=plot_all_reset
     ).pack(side=tk.RIGHT)
 
     root.mainloop()
