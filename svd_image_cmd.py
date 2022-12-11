@@ -25,12 +25,12 @@ def read_image(keyboard_message):
     """
     Print a message and read an image file from keyboard
     """
-    import imageio
+    import imageio.v3 as iio
 
     while True:
         image_file_name = input(keyboard_message)
         try:
-            input_image = imageio.imread(image_file_name)
+            input_image = iio.imread(image_file_name)
         except (OSError, SyntaxError, ValueError) as exception_caught:
             print(exception_caught, " Try again.", sep=".")
         else:

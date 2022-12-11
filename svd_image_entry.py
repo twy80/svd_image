@@ -37,7 +37,7 @@ def run_svd_image_entry():
 
         import tkinter.filedialog as fd
 
-        import imageio
+        import imageio.v3 as iio
         import numpy as np
 
         nonlocal input_image_int, rank
@@ -48,7 +48,7 @@ def run_svd_image_entry():
         )
 
         try:
-            input_image_int = imageio.imread(image_file_name)
+            input_image_int = iio.imread(image_file_name)
         except (SyntaxError, ValueError):
             messagebox.showinfo("Info", "Give a valid image file!")
         else:
