@@ -111,16 +111,16 @@ def plot_images_tk(images, descriptions, parent_win, new_window=True):
         ax.axis("off")
 
     if new_window is True:
-        plot_images.sub_win = tk.Toplevel(parent_win)
+        plot_images_tk.sub_win = tk.Toplevel(parent_win)
+        plot_images_tk.canvas = FigureCanvasTkAgg(fig, master=plot_images_tk.sub_win)
     else:
+        plot_images_tk.canvas.get_tk_widget().pack_forget()
         try:
-            plot_images.canvas.get_tk_widget().pack_forget()
+            plot_images_tk.canvas = FigureCanvasTkAgg(fig, master=plot_images_tk.sub_win)
         except Exception:
-            raise Exception(
-                "\nProblems with the window previously obtained. Set new_window = True!\n"
-            )
+            plot_images_tk.sub_win = tk.Toplevel(parent_win)
+            plot_images_tk.canvas = FigureCanvasTkAgg(fig, master=plot_images_tk.sub_win)
 
-    plot_images.canvas = FigureCanvasTkAgg(fig, master=plot_images.sub_win)
-    plot_images.canvas.draw()
-    plot_images.canvas.get_tk_widget().pack()
+    plot_images_tk.canvas.draw()
+    plot_images_tk.canvas.get_tk_widget().pack()
     fig.tight_layout(rect=(0.04, 0.04, 0.96, 0.96))
