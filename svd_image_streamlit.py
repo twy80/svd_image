@@ -108,7 +108,7 @@ def run_svd_image():
 
     # Upload an image file
     image_file = st.file_uploader(
-        label="Upload an image",
+        label="$\\hspace{0.25em}\\texttt{Upload an image}$",
         type=["jpg", "jpeg", "png", "bmp"],
         accept_multiple_files=False,
         on_change=reset_new_image,
@@ -151,7 +151,7 @@ def run_svd_image():
 
         input_method = st.slider if option == "Slider" else st.number_input
         output_rank = input_method(
-            label="Rank of the compressed image",
+            label="$\\hspace{0.25em}\\texttt{Rank of the compressed image}$",
             min_value=1,
             max_value=int(st.session_state.rank),
             step=1,

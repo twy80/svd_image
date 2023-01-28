@@ -24,7 +24,7 @@ There are only four program files: 1) one file containing the main SVD and plott
    - **plot_images_tk** plots the original and compressed images on tkinter windows.
 
 
-2. **svd_image_cmd.py**, **svd_image_entry.py**, and **svd_image_scale.py**
+2. **svd_image_cmd.py**, **svd_image_entry.py**, **svd_image_scale.py**, **svd_image_st.py**
 
    - [2.1] **svd_image_cmd.py** performs image compression via SVD by using **svd_image** and plots the resulting images using **plot_images**. The input image and the output rank are given from the keyboard.
 
@@ -32,15 +32,17 @@ There are only four program files: 1) one file containing the main SVD and plott
 
    - [2.3] **svd_image_scale.py** is almost identical to **svd_image_entry.py** except for a slightly different way of selecting the output rank. Instead of an Entry widget as in 2.2, a Scale widget is employed here.
 
+   - [2.4] **svd_image_st.py** is a single file web app, and is run by typing "streamlit run svd_image_st.py".
+
 ---
 # Environment
 
-This code works on python 3.8 and is believed to do so on earlier versions as well. Testing was done both on Windows 10 and mac OS.
+This code works on python 3.8 and is believed to do so on earlier versions as well. Testing was done both on Windows 10/11, linux, and mac OS.
 
 ---
 # Usage
 
-Just run one of the three programs in 2 (Program files).
+Just run one of the four programs in 2 (Program files).
 
 ---
 # Feedback
