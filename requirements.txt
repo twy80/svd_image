@@ -1,6 +1,0 @@
-numpy
-imageio
-scikit-image
-matplotlib
-tkinter
-streamlit
