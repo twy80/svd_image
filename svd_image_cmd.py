@@ -67,7 +67,7 @@ def run_svd_image_cmd():
 
     image_shape = input_image_int.shape
 
-    channels = 1 if len(image_shape) == 2 else image_shape[2]
+    channels = 1 if len(image_shape) == 2 else 3
     # If the image is grayscale, channels = 1
 
     for i in range(channels):  # Compute the rank of each channel
