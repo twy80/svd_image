@@ -63,7 +63,7 @@ def run_svd_image_scale():
                 else:
                     rank = max(rank, np.linalg.matrix_rank(input_image_int[:, :, i]))
 
-            button_selection.config(text=f"{image_shape[0]}x{image_shape[1]} image (rank = {rank})")
+            button_selection.config(text=f"{image_shape[1]}x{image_shape[0]} image (rank = {rank})")
             scale_rank.config(to=rank, tickinterval=rank-1)  # Put the resulting information on the widgets
 
     def plot_all_reset():
