@@ -141,7 +141,7 @@ def run_svd_image():
         # Write the information of the uploaded image
         st.write(
             "Uploaded image:",
-            st.session_state.image_dim[0], "x", st.session_state.image_dim[1],
+            st.session_state.image_dim[1], "x", st.session_state.image_dim[0],
             "pixels of rank", st.session_state.rank
         )
 
