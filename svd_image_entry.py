@@ -63,7 +63,7 @@ def run_svd_image_entry():
                 else:
                     rank = max(rank, np.linalg.matrix_rank(input_image_int[:, :, i]))
 
-            button_selection.config(text=f"{image_shape[0]}x{image_shape[1]} image (rank = {rank})")
+            button_selection.config(text=f"{image_shape[1]}x{image_shape[0]} image (rank = {rank})")
 
     def plot_all_reset():
         """
